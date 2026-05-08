@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Golden Crumb Bakery, Sunyani</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .timeline { position: relative; padding: 2rem 0; }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 50%; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), var(--brown-warm));
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      align-items: center;
+    }
+    .timeline-item:nth-child(odd) .timeline-content { order: -1; text-align: right; }
+    .timeline-item:nth-child(odd) .timeline-dot { order: 0; }
+    .timeline-dot {
+      display: flex; justify-content: center; align-items: center;
+      position: relative;
+    }
+    .timeline-dot::before {
+      content: '';
+      width: 18px; height: 18px;
+      background: var(--gold);
+      border-radius: 50%;
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 3px var(--gold);
+    }
+    .timeline-content { padding: 1.5rem; }
+    .timeline-year {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+
+    @media (max-width: 768px) {
+      .timeline::before { left: 20px; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .timeline-item:nth-child(odd) .timeline-content { order: 0; text-align: left; }
+      .timeline-dot { display: none; }
+    }
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) { .mission-grid { grid-template-columns: 1fr; } }
+    .mission-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      border-left: 4px solid var(--gold);
+      box-shadow: var(--shadow-sm);
+    }
+    .mission-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+    .mission-card p { color: var(--text-muted); line-height: 1.8; }
+  </style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">🧁 Golden Crumb</div>
+    <div class="loader-ring"></div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🧁</div>
+      <span>Golden Crumb Bakery</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" id="cart-btn">🛒 <span class="cart-count">0</span></button>
+      <button class="btn-theme" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="btn-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<div class="about-banner">
+  <h1>Our Story,<br><em>Baked with Love</em></h1>
+</div>
+
+<!-- Story Section -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items:center;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&auto=format&fit=crop"
+             alt="Bakery Story"
+             style="border-radius: var(--radius-md); width:100%; box-shadow: var(--shadow-lg);"
+             class="reveal">
+      </div>
+      <div>
+        <span class="section-label reveal">✦ Our Beginnings ✦</span>
+        <h2 class="section-title reveal reveal-delay-1">From a Small Kitchen<br><em style="color:var(--gold); font-style:italic;">to Sunyani's Heart</em></h2>
+        <div class="reveal reveal-delay-2" style="font-family:var(--font-accent); font-style:italic; font-size:1.05rem; color:var(--text-muted); line-height:1.9; margin-bottom:1.5rem;">
+          <p style="margin-bottom:1rem;">Golden Crumb Bakery was born in 2014 from a simple dream — to bring the warmth, comfort, and joy of freshly baked goods to the families of Sunyani. What started as a small home kitchen run by our founder, Maame Akua Boateng, has blossomed into one of the most beloved bakeries in the Bono Region.</p>
+          <p style="margin-bottom:1rem;">Maame Akua learned to bake from her grandmother in the village of Wenchi, carrying down recipes steeped in tradition while adding her own contemporary flair. Her vision was always clear: use the best locally sourced ingredients, bake with heart, and serve with a smile.</p>
+          <p>Today, Golden Crumb is a team of passionate bakers, decorators, and customer service professionals united by one goal — to make every visit and every bite a memory worth cherishing.</p>
+        </div>
+        <a href="shop.html" class="btn btn-primary reveal reveal-delay-3">Explore Our Menu ✦</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="section" style="background:var(--surface-2);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-label reveal">✦ What We Stand For ✦</span>
+      <h2 class="section-title reveal reveal-delay-1">Mission & Vision</h2>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card reveal">
+        <h3>🎯 Our Mission</h3>
+        <p>To craft premium baked goods using the finest locally sourced ingredients, and to serve the people of Sunyani and the Bono Region with exceptional taste, warmth, and consistent quality — every single day. We believe food has the power to bring people together, and our mission is to be the centrepiece of those shared moments.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-1">
+        <h3>🌟 Our Vision</h3>
+        <p>To be Ghana's most beloved artisan bakery brand — one that is synonymous with quality, community, and the irresistible aroma of fresh-baked goodness. We envision a future where Golden Crumb is present in every Ghanaian celebration, morning routine, and family gathering from Sunyani to Accra and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-label reveal">✦ Our Core Values ✦</span>
+      <h2 class="section-title reveal reveal-delay-1">What Guides Us</h2>
+    </div>
+    <div class="values-grid" style="grid-template-columns:repeat(auto-fill, minmax(200px,1fr));">
+      <div class="value-card reveal"><span class="value-icon">🌾</span><div class="value-title">Local First</div><div class="value-desc">Supporting local farmers and suppliers across the Bono Region.</div></div>
+      <div class="value-card reveal reveal-delay-1"><span class="value-icon">✨</span><div class="value-title">Quality Always</div><div class="value-desc">No shortcuts. Every loaf, cake, and pastry meets our exacting standards.</div></div>
+      <div class="value-card reveal reveal-delay-2"><span class="value-icon">🤝</span><div class="value-title">Community</div><div class="value-desc">We are rooted in Sunyani and invest in the people around us.</div></div>
+      <div class="value-card reveal reveal-delay-3"><span class="value-icon">💡</span><div class="value-title">Innovation</div><div class="value-desc">Blending Ghanaian tradition with modern baking techniques.</div></div>
+      <div class="value-card reveal reveal-delay-4"><span class="value-icon">💚</span><div class="value-title">Sustainability</div><div class="value-desc">Minimising waste and using eco-friendly packaging where possible.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="section" style="background:var(--surface-2);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-label reveal">✦ Our Journey ✦</span>
+      <h2 class="section-title reveal reveal-delay-1">A Decade of Golden Moments</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content reveal">
+          <div class="timeline-year">2014</div>
+          <div class="timeline-title">The First Loaf</div>
+          <div class="timeline-desc">Maame Akua bakes her first batch of bread from her home kitchen on Brong Avenue, Sunyani, and distributes them to neighbours. The response is overwhelming.</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div></div>
+      </div>
+      <div class="timeline-item">
+        <div></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content reveal">
+          <div class="timeline-year">2016</div>
+          <div class="timeline-title">Opening Our First Shop</div>
+          <div class="timeline-desc">Golden Crumb opens its first physical bakery in the Sunyani Central Market area. Within weeks, queues form daily before 7 AM.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content reveal">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-title">Custom Cakes & Events</div>
+          <div class="timeline-desc">We expand our offerings to include custom celebration cakes for weddings, birthdays and corporate events across the Bono Region.</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div></div>
+      </div>
+      <div class="timeline-item">
+        <div></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content reveal">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-title">Award-Winning Bakery</div>
+          <div class="timeline-desc">Recognised as the Best Artisan Bakery in the Bono Region at the Ghana Food & Hospitality Awards, cementing our place as Sunyani's finest.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content reveal">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-title">Decade of Baking</div>
+          <div class="timeline-desc">We celebrate 10 years of Golden Crumb with a new flagship store, an expanded menu, and delivery services across Sunyani and surrounds.</div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-label reveal">✦ The People Behind the Magic ✦</span>
+      <h2 class="section-title reveal reveal-delay-1">Meet Our Team</h2>
+      <p class="section-subtitle reveal reveal-delay-2">The passionate bakers and creatives who make Golden Crumb what it is.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-card-body">
+          <div class="team-card-role">Founder & Head Baker</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&auto=format&fit=crop" alt="Kwame Ofori">
+        <div class="team-card-body">
+          <div class="team-card-name">Kwame Ofori</div>
+          <div class="team-card-role">Master Pastry Chef</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=400&auto=format&fit=crop" alt="Abena Frimpong">
+        <div class="team-card-body">
+          <div class="team-card-name">Abena Frimpong</div>
+          <div class="team-card-role">Cake Decorator</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop" alt="Emmanuel Acheampong">
+        <div class="team-card-body">
+          <div class="team-card-name">Emmanuel Acheampong</div>
+          <div class="team-card-role">Bread Baker</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold-light);">✦ Taste the Difference ✦</span>
+    <h2 class="section-title reveal" style="color:#fff;">Visit Us in Sunyani Today</h2>
+    <p class="section-subtitle reveal reveal-delay-1" style="color:rgba(255,255,255,0.8); margin:0 auto 2.5rem;">Come experience the warmth, the aroma, and the taste that has made Sunyani fall in love with us.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" class="reveal reveal-delay-2">
+      <a href="shop.html" class="btn btn-primary">Order Now</a>
+      <a href="contact.html" class="btn" style="background:rgba(255,255,255,0.12);color:#fff;border:2px solid rgba(255,255,255,0.35);">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🧁 Golden Crumb Bakery</div>
+      <p>Sunyani's premier artisan bakery, bringing joy to families across the Bono Region since 2014.</p>
+      <div class="footer-socials">
+        <div class="footer-social-btn">📘</div>
+        <div class="footer-social-btn">📷</div>
+        <div class="footer-social-btn">🐦</div>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4>
+      <ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div class="footer-col"><h4>Our Products</h4>
+      <ul><li><a href="shop.html">Artisan Breads</a></li><li><a href="shop.html">Custom Cakes</a></li><li><a href="shop.html">Pastries</a></li><li><a href="shop.html">Cookies</a></li></ul>
+    </div>
+    <div class="footer-col"><h4>Contact</h4>
+      <ul class="footer-contact">
+        <li><span>📍</span><span>Sunyani, Bono Region, Ghana</span></li>
+        <li><span>📞</span><span>0204131720</span></li>
+        <li><span>📞</span><span>0204131720</span></li>
+        <li><span>✉️</span><span>hello@goldencrumb.gh</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Golden Crumb Bakery. All rights reserved.</span><span>Made with ❤️ in Sunyani, Ghana</span></div>
+</footer>
+
+<button id="back-to-top">↑</button>
+<div id="cart-overlay" class="cart-overlay"></div>
+<div id="cart-drawer" class="cart-drawer">
+  <div class="cart-header"><h3>🛒 Your Cart</h3><button class="btn-close-cart" id="btn-close-cart">✕</button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cart-total">GHS 0.00</span></div>
+    <a href="shop.html" class="btn btn-primary" style="display:block; text-align:center; margin-top:0.5rem;">Go to Shop</a>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

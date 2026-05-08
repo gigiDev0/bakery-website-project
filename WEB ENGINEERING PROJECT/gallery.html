@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery – Golden Crumb Bakery, Sunyani</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .gallery-hero {
+      height: 320px;
+      background: linear-gradient(135deg, rgba(59,31,10,0.85) 0%, rgba(200,150,44,0.4) 100%),
+        url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=1600&auto=format&fit=crop') center/cover;
+      display: flex; align-items: flex-end; padding: 0 5% 3rem;
+    }
+    .masonry {
+      columns: 4;
+      column-gap: 1.25rem;
+    }
+    .masonry .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1.25rem;
+      aspect-ratio: unset;
+    }
+    .masonry .gallery-item img {
+      width: 100%; height: auto;
+    }
+    @media (max-width: 1024px) { .masonry { columns: 3; } }
+    @media (max-width: 768px)  { .masonry { columns: 2; } }
+    @media (max-width: 480px)  { .masonry { columns: 1; } }
+  </style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">🧁 Golden Crumb</div>
+    <div class="loader-ring"></div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🧁</div>
+      <span>Golden Crumb Bakery</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" id="cart-btn">🛒 <span class="cart-count">0</span></button>
+      <button class="btn-theme" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="btn-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="gallery-hero">
+  <div style="max-width:1280px; margin:0 auto; width:100%;">
+    <h1 style="font-family:var(--font-display); font-size:clamp(2.5rem,5vw,4rem); color:#fff;">Our Gallery</h1>
+    <p style="font-family:var(--font-accent); font-style:italic; color:rgba(255,255,255,0.78); font-size:1.1rem;">A visual feast of our finest creations</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-tabs" id="gallery-filters" style="margin-bottom:2.5rem;">
+      <button class="filter-tab active" data-cat="All">All</button>
+      <button class="filter-tab" data-cat="Cakes">Cakes</button>
+      <button class="filter-tab" data-cat="Breads">Breads</button>
+      <button class="filter-tab" data-cat="Pastries">Pastries</button>
+      <button class="filter-tab" data-cat="Interior">Bakery</button>
+    </div>
+    <div class="masonry" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🧁 Golden Crumb Bakery</div>
+      <p>Sunyani's premier artisan bakery since 2014.</p>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col"><h4>Contact</h4>
+      <ul class="footer-contact">
+        <li><span>📍</span><span>Sunyani, Bono Region, Ghana</span></li>
+        <li><span>📞</span><span>0553518061</span></li>
+        <li><span>📞</span><span>0554669343</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Golden Crumb Bakery. Sunyani, Ghana.</span></div>
+</footer>
+
+<button id="back-to-top">↑</button>
+<div id="cart-overlay" class="cart-overlay"></div>
+<div id="cart-drawer" class="cart-drawer">
+  <div class="cart-header"><h3>🛒 Your Cart</h3><button class="btn-close-cart" id="btn-close-cart">✕</button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cart-total">GHS 0.00</span></div>
+    <a href="shop.html" class="btn btn-primary" style="display:block; text-align:center; margin-top:0.5rem;">Continue Shopping</a>
+  </div>
+</div>
+
+<script>
+const galleryItems = [
+  { id: 1, cat: 'Cakes',    title: 'Elegant Chocolate Cake',      img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop' },
+  { id: 2, cat: 'Pastries', title: 'Golden Butter Croissants',     img: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&auto=format&fit=crop' },
+  { id: 3, cat: 'Breads',   title: 'Rustic Sourdough',             img: 'https://images.unsplash.com/photo-1585478259715-876acc5be8eb?w=800&auto=format&fit=crop' },
+  { id: 4, cat: 'Cakes',    title: 'Red Velvet Celebration Cake',  img: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=800&auto=format&fit=crop' },
+  { id: 5, cat: 'Pastries', title: 'Warm Cinnamon Rolls',          img: 'https://images.unsplash.com/photo-1484723091739-30990ca1de6a?w=800&auto=format&fit=crop' },
+  { id: 6, cat: 'Pastries', title: 'Glazed Donuts',                img: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&auto=format&fit=crop' },
+  { id: 7, cat: 'Cakes',    title: 'Strawberry Cheesecake',        img: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&auto=format&fit=crop' },
+  { id: 8, cat: 'Interior', title: 'Our Warm Bakery Interior',     img: 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=800&auto=format&fit=crop' },
+  { id: 9, cat: 'Breads',   title: 'Freshly Baked Baguettes',      img: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&auto=format&fit=crop' },
+  { id: 10, cat: 'Cakes',   title: 'Black Forest Delight',         img: 'https://images.unsplash.com/photo-1611293388250-580b08c4a145?w=800&auto=format&fit=crop' },
+  { id: 11, cat: 'Pastries',title: 'Flaky Puff Pastries',          img: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=800&auto=format&fit=crop' },
+  { id: 12, cat: 'Interior',title: 'The Baking Process',           img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop' },
+  { id: 13, cat: 'Cakes',   title: 'Tiered Wedding Cake',          img: 'https://images.unsplash.com/photo-1562440499-64b9a5a5b9b7?w=800&auto=format&fit=crop' },
+  { id: 14, cat: 'Breads',  title: 'Whole Wheat Artisan Bread',    img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop' },
+  { id: 15, cat: 'Pastries',title: 'French Éclairs',               img: 'https://images.unsplash.com/photo-1548345680-f5475ea5df84?w=800&auto=format&fit=crop' },
+  { id: 16, cat: 'Interior',title: 'Fresh from the Oven',          img: 'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=800&auto=format&fit=crop' },
+  { id: 17, cat: 'Cakes',   title: 'Mango Birthday Cake',          img: 'https://images.unsplash.com/photo-1558303279-0aba7a709a23?w=800&auto=format&fit=crop' },
+  { id: 18, cat: 'Pastries',title: 'Blueberry Muffins',            img: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=800&auto=format&fit=crop' },
+];
+
+let activeFilter = 'All';
+
+function renderGallery() {
+  const grid = document.getElementById('gallery-grid');
+  const items = galleryItems.filter(i => activeFilter === 'All' || i.cat === activeFilter);
+  grid.innerHTML = items.map(item => `
+    <div class="gallery-item reveal" data-img="${item.img}" data-title="${item.title}" onclick="openLightbox('${item.img}','${item.title}')">
+      <img src="${item.img}" alt="${item.title}" loading="lazy">
+      <div class="gallery-item-overlay">
+        <p class="gallery-item-title">${item.title}</p>
+      </div>
+    </div>
+  `).join('');
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (typeof revealObserver !== 'undefined') revealObserver.observe(el);
+  });
+}
+
+document.getElementById('gallery-filters').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-tab');
+  if (!btn) return;
+  document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeFilter = btn.dataset.cat;
+  renderGallery();
+});
+
+function openLightbox(imgSrc, title) {
+  document.getElementById('lightbox-img').src = imgSrc;
+  document.getElementById('lightbox-caption').textContent = title;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeLightbox();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+renderGallery();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

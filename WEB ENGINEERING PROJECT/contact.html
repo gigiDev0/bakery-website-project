@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Golden Crumb Bakery, Sunyani</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-hero {
+      height: 320px;
+      background: linear-gradient(135deg, rgba(59,31,10,0.85) 0%, rgba(107,58,31,0.55) 100%),
+        url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&auto=format&fit=crop') center/cover;
+      display: flex; align-items: flex-end; padding: 0 5% 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">🧁 Golden Crumb</div>
+    <div class="loader-ring"></div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🧁</div>
+      <span>Golden Crumb Bakery</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" id="cart-btn">🛒 <span class="cart-count">0</span></button>
+      <button class="btn-theme" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="btn-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="contact-hero">
+  <div style="max-width:1280px; margin:0 auto; width:100%;">
+    <h1 style="font-family:var(--font-display); font-size:clamp(2.5rem,5vw,4rem); color:#fff;">Get in Touch</h1>
+    <p style="font-family:var(--font-accent); font-style:italic; color:rgba(255,255,255,0.78); font-size:1.1rem;">We'd love to hear from you — orders, enquiries, or just to say hello!</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div>
+        <div class="contact-info">
+          <h3>Visit Us or Call Anytime</h3>
+          <p>Our doors are open Monday to Saturday. Whether you're placing a custom cake order, enquiring about bulk purchases, or just stopping by for a croissant — we'd be delighted to see you.</p>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="contact-icon">📍</div>
+          <div class="contact-detail">
+            <strong>Our Location</strong>
+            <span>Sunyani Central, Bono Region, Ghana</span>
+          </div>
+        </div>
+
+        <div class="contact-item reveal reveal-delay-1">
+          <div class="contact-icon">📞</div>
+          <div class="contact-detail">
+            <strong>Phone Numbers</strong>
+            <span>0553518061 &nbsp;|&nbsp; 0554669343</span>
+          </div>
+        </div>
+
+        <div class="contact-item reveal reveal-delay-2">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-detail">
+            <strong>Email Address</strong>
+            <span>hello@goldencrumb.gh</span>
+          </div>
+        </div>
+
+        <div class="contact-item reveal reveal-delay-3">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-detail">
+            <strong>Opening Hours</strong>
+            <span>Mon – Sat: 6:00 AM – 8:00 PM<br>Sunday: 7:00 AM – 3:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-placeholder reveal">
+          <span>📍 Sunyani, Bono Region, Ghana</span>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap reveal">
+        <h3>Send Us a Message</h3>
+        <div class="success-msg" id="contact-success">
+          ✅ Thank you! Your message has been sent. We'll get back to you within 24 hours.
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label>Your Full Name</label>
+            <input type="text" id="contact-name" placeholder="e.g. Kofi Mensah">
+            <span class="error-msg">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="contact-email" placeholder="e.g. kofi@example.com">
+            <span class="error-msg">Please enter a valid email.</span>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select id="contact-subject">
+              <option value="">Select a subject…</option>
+              <option>Custom Cake Order</option>
+              <option>Bulk Order Enquiry</option>
+              <option>General Enquiry</option>
+              <option>Feedback</option>
+              <option>Partnership</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea id="contact-message" placeholder="Write your message here…"></textarea>
+            <span class="error-msg">Please write your message.</span>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message 📬</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section" style="background:var(--surface-2);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-label reveal">✦ Common Questions ✦</span>
+      <h2 class="section-title reveal reveal-delay-1">Frequently Asked</h2>
+    </div>
+    <div style="max-width:760px; margin:0 auto;" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="section-title reveal" style="color:#fff;">Order Fresh Today</h2>
+    <p class="section-subtitle reveal reveal-delay-1" style="color:rgba(255,255,255,0.8); margin:0 auto 2.5rem;">Call us on <strong style="color:var(--gold-light)">0553518061</strong> or <strong style="color:var(--gold-light)">0554669343</strong> to place your order!</p>
+    <a href="shop.html" class="btn btn-primary reveal reveal-delay-2">Browse Our Shop</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🧁 Golden Crumb Bakery</div>
+      <p>Sunyani's premier artisan bakery, bringing joy to families across the Bono Region since 2014.</p>
+      <div class="footer-socials">
+        <div class="footer-social-btn">📘</div>
+        <div class="footer-social-btn">📷</div>
+        <div class="footer-social-btn">🐦</div>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4>
+      <ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div class="footer-col"><h4>Products</h4>
+      <ul><li><a href="shop.html">Artisan Breads</a></li><li><a href="shop.html">Custom Cakes</a></li><li><a href="shop.html">Pastries</a></li><li><a href="shop.html">Cupcakes</a></li></ul>
+    </div>
+    <div class="footer-col"><h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><span>📍</span><span>Sunyani, Bono Region, Ghana</span></li>
+        <li><span>📞</span><span>0553518061</span></li>
+        <li><span>📞</span><span>0554669343</span></li>
+        <li><span>✉️</span><span>hello@goldencrumb.gh</span></li>
+        <li><span>🕐</span><span>Mon–Sat: 6AM – 8PM</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Golden Crumb Bakery. All rights reserved.</span>
+    <span>Made with ❤️ in Sunyani, Ghana</span>
+  </div>
+</footer>
+
+<button id="back-to-top">↑</button>
+<div id="cart-overlay" class="cart-overlay"></div>
+<div id="cart-drawer" class="cart-drawer">
+  <div class="cart-header"><h3>🛒 Your Cart</h3><button class="btn-close-cart" id="btn-close-cart">✕</button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cart-total">GHS 0.00</span></div>
+    <a href="shop.html" class="btn btn-primary" style="display:block; text-align:center; margin-top:0.5rem;">Shop Now</a>
+  </div>
+</div>
+
+<script>
+const faqs = [
+  { q: 'Do you offer custom cake orders?', a: 'Absolutely! We specialise in custom cakes for weddings, birthdays, corporate events, and more. Please call us at least 3 days in advance for standard custom orders, or 7 days for complex tiered cakes.' },
+  { q: 'Do you deliver within Sunyani?', a: 'Yes! We offer delivery across Sunyani and select areas in the Bono Region. Delivery fees vary by distance. Call us on 0553518061 or 0554669343 to arrange delivery.' },
+  { q: 'Are your products made fresh daily?', a: 'Every single item is baked fresh each morning. We open at 6 AM and start baking from 4 AM. We do not stock day-old products.' },
+  { q: 'Do you cater for events and parties?', a: 'Yes! We offer full event catering packages including pastry platters, custom cakes, and assorted baked goods. Contact us to discuss your requirements.' },
+  { q: 'Can I place a bulk order?', a: 'Yes, bulk orders are welcome and come with discounted pricing. Please contact us at least 48 hours in advance for bulk orders.' },
+];
+
+const faqList = document.getElementById('faq-list');
+faqList.innerHTML = faqs.map((f, i) => `
+  <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); margin-bottom:1rem; overflow:hidden;" class="reveal${i ? ' reveal-delay-' + Math.min(i, 4) : ''}">
+    <button onclick="this.parentElement.classList.toggle('open'); this.querySelector('.faq-icon').textContent = this.parentElement.classList.contains('open') ? '−' : '+';"
+      style="width:100%; display:flex; justify-content:space-between; align-items:center; padding:1.25rem 1.5rem; background:none; border:none; cursor:pointer; font-family:var(--font-body); font-size:0.95rem; font-weight:600; color:var(--text-main); text-align:left;">
+      ${f.q}
+      <span class="faq-icon" style="color:var(--gold); font-size:1.2rem; margin-left:1rem; flex-shrink:0;">+</span>
+    </button>
+    <div style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s;" class="faq-body">
+      <p style="padding:0 1.5rem 1.25rem; color:var(--text-muted); font-size:0.92rem; line-height:1.7;">${f.a}</p>
+    </div>
+  </div>
+`).join('');
+
+// FAQ toggle animation
+document.querySelectorAll('#faq-list > div > button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const body = btn.nextElementSibling;
+    const isOpen = btn.parentElement.classList.contains('open');
+    body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0';
+    body.style.paddingBottom = isOpen ? '' : '0';
+    // Wait for toggle then update
+    setTimeout(() => {
+      if (!btn.parentElement.classList.contains('open')) body.style.maxHeight = '0';
+    }, 10);
+  });
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

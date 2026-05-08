@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Crumb Bakery – Freshly Baked Happiness in Sunyani</title>
+  <meta name="description" content="Golden Crumb Bakery – Sunyani's finest artisan bakery. Fresh bread, cakes, pastries and more. Located in Sunyani, Bono Region, Ghana.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">🧁 Golden Crumb</div>
+    <div class="loader-ring"></div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🧁</div>
+      <span>Golden Crumb Bakery</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" id="cart-btn" aria-label="Open cart">
+        🛒 <span class="cart-count">0</span>
+      </button>
+      <button class="btn-theme" id="theme-toggle" aria-label="Toggle theme">
+        <span id="theme-icon">🌙</span>
+      </button>
+      <button class="btn-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">✦ Sunyani's Finest Artisan Bakery ✦</p>
+    <h1>Freshly Baked<br><em>Happiness</em><br>in Sunyani</h1>
+    <p class="hero-subtitle">Handcrafted with love every morning. Experience the warm, buttery aroma of tradition baked fresh daily for our community.</p>
+    <div class="hero-cta">
+      <a href="shop.html" class="btn btn-primary">Shop Now ✦</a>
+      <a href="about.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.6);">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <span>10+</span>
+    <span>Years of Baking Joy</span>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item reveal">
+      <strong>2,000+</strong>
+      <span>Happy Customers</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <strong>50+</strong>
+      <span>Baked Varieties</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <strong>10</strong>
+      <span>Years of Excellence</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <strong>Daily</strong>
+      <span>Fresh from Oven</span>
+    </div>
+  </div>
+</div>
+
+<!-- Featured Products -->
+<section class="section" style="background: var(--surface-2);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-label reveal">✦ Our Specialties ✦</span>
+      <h2 class="section-title reveal reveal-delay-1">Fresh from Our Oven</h2>
+      <p class="section-subtitle reveal reveal-delay-2">Each item is prepared with the finest ingredients, baked fresh every morning for your delight.</p>
+    </div>
+    <div class="products-grid" id="featured-products"></div>
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="shop.html" class="btn btn-primary reveal">View Full Menu ✦</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; flex-wrap:wrap;">
+      <div>
+        <span class="section-label reveal">✦ Why Golden Crumb ✦</span>
+        <h2 class="section-title reveal reveal-delay-1">Baked with Heart,<br><em style="font-style:italic; color:var(--gold);">Served with Love</em></h2>
+        <p class="section-subtitle reveal reveal-delay-2" style="margin-bottom:2rem;">We believe every bite should tell a story — of early mornings, quality ingredients, and a deep love for our Sunyani community.</p>
+        <div class="values-grid" style="grid-template-columns: repeat(2,1fr); margin-top:1rem;">
+          <div class="value-card reveal">
+            <span class="value-icon">🌾</span>
+            <div class="value-title">Fresh Ingredients</div>
+            <div class="value-desc">Sourced daily from local Bono Region suppliers.</div>
+          </div>
+          <div class="value-card reveal reveal-delay-1">
+            <span class="value-icon">👨‍🍳</span>
+            <div class="value-title">Skilled Bakers</div>
+            <div class="value-desc">Our team brings generations of Ghanaian baking tradition.</div>
+          </div>
+          <div class="value-card reveal reveal-delay-2">
+            <span class="value-icon">🕐</span>
+            <div class="value-title">Daily Fresh Bake</div>
+            <div class="value-desc">Every item is baked fresh before 6 AM every morning.</div>
+          </div>
+          <div class="value-card reveal reveal-delay-3">
+            <span class="value-icon">🌍</span>
+            <div class="value-title">Community Rooted</div>
+            <div class="value-desc">Proudly serving Sunyani families for over a decade.</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius: 24px; overflow:hidden; box-shadow: var(--shadow-lg);">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop" alt="Bakery kitchen" style="width:100%; aspect-ratio:4/5; object-fit:cover;" class="reveal">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" style="background: var(--surface-2);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-label reveal">✦ What People Say ✦</span>
+      <h2 class="section-title reveal reveal-delay-1">Loved by Sunyani</h2>
+      <p class="section-subtitle reveal reveal-delay-2">Don't take our word for it — hear from our cherished community.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Golden Crumb has been our family's go-to bakery since they opened. Their Chocolate Cake for my daughter's birthday was absolutely divine — moist, rich, and beautifully decorated!</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&auto=format&fit=crop" alt="Abena Mensah" class="author-avatar">
+          <div>
+            <div class="author-name">Abena Mensah</div>
+            <div class="author-loc">Sunyani, Bono Region</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Every Saturday morning I come here for the cinnamon rolls. Nothing beats the smell and taste! The staff are so warm and friendly. Truly the heart of Sunyani.</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=100&auto=format&fit=crop" alt="Kofi Asante" class="author-avatar">
+          <div>
+            <div class="author-name">Kofi Asante</div>
+            <div class="author-loc">Sunyani New Site</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">I ordered a custom wedding cake from Golden Crumb and it exceeded all my expectations. The attention to detail and flavour were outstanding. My guests couldn't stop talking about it!</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=100&auto=format&fit=crop" alt="Akosua Frimpong" class="author-avatar">
+          <div>
+            <div class="author-name">Akosua Frimpong</div>
+            <div class="author-loc">Odumasi, Bono Region</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Customer Reviews Section -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2rem;">
+      <span class="section-label reveal">✦ Community Reviews ✦</span>
+      <h2 class="section-title reveal reveal-delay-1">Share Your Experience</h2>
+    </div>
+    <div class="text-center reveal reveal-delay-2" style="margin-bottom:2.5rem;">
+      <button class="btn btn-primary" onclick="openReviewModal(null, 'Golden Crumb Bakery')">Write a Review ⭐</button>
+    </div>
+    <div class="reviews-container" id="reviews-list"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold-light);">✦ Ready to Indulge? ✦</span>
+    <h2 class="section-title reveal" style="color:#fff; margin-bottom:1rem;">Order Fresh Today</h2>
+    <p class="section-subtitle reveal reveal-delay-1" style="color:rgba(255,255,255,0.8);">Visit our shop or call us to place your order. We deliver within Sunyani!</p>
+    <div style="margin-top:2.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" class="reveal reveal-delay-2">
+      <a href="shop.html" class="btn btn-primary">Browse Our Shop</a>
+      <a href="contact.html" class="btn" style="background:rgba(255,255,255,0.12); color:#fff; border:2px solid rgba(255,255,255,0.35);">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🧁 Golden Crumb Bakery</div>
+      <p>Sunyani's premier artisan bakery, bringing joy to families across the Bono Region since 2014. Baked fresh, served with love.</p>
+      <div class="footer-socials">
+        <div class="footer-social-btn">📘</div>
+        <div class="footer-social-btn">📷</div>
+        <div class="footer-social-btn">🐦</div>
+        <div class="footer-social-btn">▶️</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Products</h4>
+      <ul>
+        <li><a href="shop.html">Artisan Breads</a></li>
+        <li><a href="shop.html">Custom Cakes</a></li>
+        <li><a href="shop.html">Pastries</a></li>
+        <li><a href="shop.html">Cupcakes</a></li>
+        <li><a href="shop.html">Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><span>📍</span><span>Sunyani, Bono Region, Ghana</span></li>
+        <li><span>📞</span><span>0553518061</span></li>
+        <li><span>📞</span><span>0554669343</span></li>
+        <li><span>✉️</span><span>hello@goldencrumb.gh</span></li>
+        <li><span>🕐</span><span>Mon–Sat: 6AM – 8PM</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Golden Crumb Bakery. All rights reserved.</span>
+    <span>Made with ❤️ in Sunyani, Ghana</span>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top">↑</button>
+
+<!-- Cart Drawer -->
+<div id="cart-overlay" class="cart-overlay"></div>
+<div id="cart-drawer" class="cart-drawer">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="btn-close-cart" id="btn-close-cart">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cart-total">GHS 0.00</span>
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="showToast('Order placed! We will contact you shortly.','📦')">Checkout</button>
+  </div>
+</div>
+
+<!-- Review Modal -->
+<div class="modal-overlay" id="review-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Write a Review</h3>
+      <button class="btn-close-modal" id="btn-close-modal">✕</button>
+    </div>
+    <p style="color:var(--text-muted); font-family:var(--font-accent); font-style:italic; margin-bottom:1.5rem;" id="review-product-name">Golden Crumb Bakery</p>
+    <form id="review-form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="reviewer-name" placeholder="e.g. Kwame Mensah" required>
+      </div>
+      <div class="form-group">
+        <label>Your Rating</label>
+        <div class="star-rating">
+          <button type="button" class="star-btn">★</button>
+          <button type="button" class="star-btn">★</button>
+          <button type="button" class="star-btn">★</button>
+          <button type="button" class="star-btn">★</button>
+          <button type="button" class="star-btn">★</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Your Review</label>
+        <textarea id="reviewer-comment" placeholder="Tell us about your experience…" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Submit Review ⭐</button>
+    </form>
+  </div>
+</div>
+
+<script>
+// Featured products data (6 items for home page)
+const featuredProducts = [
+  { id: 1, name: 'Chocolate Layer Cake', cat: 'Cakes', price: 85, img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop', badge: 'Bestseller' },
+  { id: 2, name: 'Butter Croissant', cat: 'Pastries', price: 12, img: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop', badge: '' },
+  { id: 4, name: 'Glazed Donuts (6 pcs)', cat: 'Pastries', price: 28, img: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop', badge: 'Popular' },
+  { id: 5, name: 'Red Velvet Cake', cat: 'Cakes', price: 95, img: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600&auto=format&fit=crop', badge: '' },
+  { id: 6, name: 'Cinnamon Rolls', cat: 'Pastries', price: 35, img: 'rolls.webp', badge: 'Fresh' },
+  { id: 3, name: 'Artisan Sourdough', cat: 'Breads', price: 22, img: 'bread.jpg', badge: '' },
+];
+
+const grid = document.getElementById('featured-products');
+grid.innerHTML = featuredProducts.map((p, i) => `
+  <div class="product-card reveal${i > 0 ? ' reveal-delay-' + Math.min(i, 4) : ''}">
+    <div class="product-img-wrap">
+      <img src="${p.img}" alt="${p.name}" loading="lazy">
+      ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+      <div class="product-overlay">
+        <button class="btn btn-primary" style="padding:0.6rem 1.2rem; font-size:0.78rem;" onclick="addToCart({id:${p.id},name:'${p.name}',price:${p.price},img:'${p.img}'})">Add to Cart</button>
+        <button class="btn" style="background:rgba(255,255,255,0.9); color:var(--brown-deep); padding:0.6rem 1.2rem; font-size:0.78rem; border-radius:100px;" onclick="openReviewModal(${p.id},'${p.name}')">Review</button>
+      </div>
+    </div>
+    <div class="product-body">
+      <div class="product-cat">${p.cat}</div>
+      <div class="product-name">${p.name}</div>
+      <div class="product-footer">
+        <span class="product-price">GHS ${p.price.toFixed(2)}</span>
+        <button class="btn-add-cart" onclick="addToCart({id:${p.id},name:'${p.name}',price:${p.price},img:'${p.img}'})">+ Add</button>
+      </div>
+    </div>
+  </div>
+`).join('');
+
+document.querySelectorAll('.reveal').forEach(el => {
+  if (typeof revealObserver !== 'undefined') revealObserver.observe(el);
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
